@@ -5,7 +5,6 @@ export class Profile {
         public login:string,
         public bio:string,
         public public_repos:number,
-        public created_at:Date
 
     ){}
 }

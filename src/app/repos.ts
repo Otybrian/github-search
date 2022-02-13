@@ -6,6 +6,5 @@ export class Repos {
         public clone_url:string,
         public language:string,
         public description:string,
-        public updated_at:Date,
     ){}
 }
