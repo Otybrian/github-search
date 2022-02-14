@@ -1,13 +1,8 @@
-export class User {
-    push(arg0: User) {
-      throw new Error('Method not implemented.');
-    }
-    
-    
+export class User { 
     constructor(
-        public login:string,
+        public name:string,
         public avatar_url:string,
-        public bio:string,
+        public bio:string
 
     ){}
 }

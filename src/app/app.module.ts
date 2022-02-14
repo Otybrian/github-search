@@ -5,22 +5,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileService } from './profile-service.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
-   
-   
+    ProfileComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+   
+    
     
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
