@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServiceService } from './service.service';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,8 @@ import { ServiceService } from './service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Github';
+  user!:User;
+
 }
+
+
