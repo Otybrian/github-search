@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile-service.service';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    NavigationBarComponent
     
   ],
   imports: [

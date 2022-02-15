@@ -1,3 +1,4 @@
+<app-navigation-bar></app-navigation-bar>
 <app-search-form (searchProf)="search($event)"></app-search-form>
 <div class="container">
     <div class="User" *ngIf="user">
@@ -5,14 +6,14 @@
             <div class="col-md-6">
                 <h1>Here's my Github Profile</h1>
                 <img src="{{user.avatar_url}}" alt="">
-                <p>Username: {{user.name}}</p>
+                <p class="card-body">Username: {{user.name}}</p>
             </div>
             <div class="col-md-6">
                 <p>Background: {{user.bio}}</p>
                 <p>Followers: {{user.followers}}</p>
                 <p>Following: {{user.following}}</p>
                 <p>Link to Contributors: {{user.contributors_url}}</p>
-                <p>Link to Github: {{user.html_url}}</p>
+                <p>Link to Github: {{user.html_url}}></p>
                 <p>Description: {{user.description}}</p>
                 <p>Number of Repositories: {{user.public_repos}}</p>
             </div>
