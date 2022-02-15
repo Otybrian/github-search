@@ -16,8 +16,8 @@ export class ProfileComponent implements OnInit {
 
 
   constructor(private profileService: ProfileService) {
-    this.user = new User("", "", "")
-    this.repository = new Repository(0,"", "", "",0,0,0)
+    this.user = new User("", "", "",0,0,0,"","","",0)
+    this.repository = new Repository()
   }
 
 

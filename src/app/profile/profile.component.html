@@ -4,13 +4,11 @@
     <img src="{{user.avatar_url}}" alt="">
     <p>Username: {{user.name}}</p>
     <p>Background: {{user.bio}}</p>
-</div>
-<div *ngFor="let repo of repository">
-    <p>{{repo.public_repos}}</p>
-    <p>{{repo.description}}</p>
-    <p>{{repo.contributors_url}}</p>
-    <p>{{repo.repos}}</p>
-    <p>{{repo.followers}}</p>
-    <p>{{repo.following}}</p>
-    <p>{{repo.html_url}}</p>
-</div>
+    <p>Followers: {{user.followers}}</p>
+    <p>Following: {{user.following}}</p>
+    <p>Link to Contributors: {{user.contributors_url}}</p>
+    <p>Link to Github: {{user.html_url}}</p>
+    <p>Description: {{user.description}}</p>
+    <p>Number of Repositories: {{user.public_repos}}</p>
+    </div>
+    
