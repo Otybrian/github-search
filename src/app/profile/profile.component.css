@@ -1,8 +1,13 @@
 img{
     border-radius: 50%;
 }
-h1{
+.container-fluid{
+    background-color: whitesmoke;
+    padding: 20px;
 
+}
+h1{
+    color: blue;
 }
 .list-group{
     margin-top: 60px;
@@ -31,5 +36,21 @@ h1{
     height: 30px;
     color: white;
     width: 150px;
+    border: none;
+}
+.contributors{
+    border-radius: 5px;
+    background-color: green;
+    height: 50px;
+    color: white;
+    width: 200px;
+    border: none;
+}
+.visit{
+    border-radius: 5px;
+    background-color: rgb(247, 193, 78);
+    height: 50px;
+    color: white;
+    width: 200px;
     border: none;
 }
