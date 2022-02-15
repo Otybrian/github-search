@@ -9,3 +9,11 @@
     font-style: oblique;
     font-weight: bold;
 }
+a{
+    color:white;
+    text-decoration:none;
+}
+a:hover{
+    font-size: 20px;
+    color: orangered;
+}
