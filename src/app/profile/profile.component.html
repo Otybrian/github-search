@@ -1,8 +1,15 @@
 <div class="User" *ngIf="user">
-
     <h1>Here's my Github Profile</h1>
     <img src="{{user.avatar_url}}" alt="">
-    <p>Username: {{user.bio}}</p>
-    <p></p>
-
+    <p>Username: {{user.name}}</p>
+    <p>Background: {{user.bio}}</p>
+</div>
+<div *ngFor="let repo of repository">
+    <p>{{repo.public_repos}}</p>
+    <p>{{repo.description}}</p>
+    <p>{{repo.contributors_url}}</p>
+    <p>{{repo.repos}}</p>
+    <p>{{repo.followers}}</p>
+    <p>{{repo.following}}</p>
+    <p>{{repo.html_url}}</p>
 </div>

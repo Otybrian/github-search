@@ -8,23 +8,20 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProfileService {
+
   user!: User;
-  repository!: Repository;
+  repository: any;
+  
   constructor(private http: HttpClient) {
-    this.user = new User("", "", "");
-    this.repository = new Repository("", "", "");
+    this.user = new User("","", "");
+    this.repository = new Repository(0,"", "", "",0,0,0);
   }
-  getUserProfile(searchItem: string | number) {
+  getMyProfile(searchItem: string | number) {
     interface apiResults {
       name: string,
       avatar_url: string,
       bio: string,
       html_url: string,
-      contributors_url:string,
-      description:string
-      // followers: number,
-      // following: number,
-      // public_repos: number
     }
     let headers = new HttpHeaders({
       authorization: environment.apiUrl + environment.apiKey,
@@ -36,11 +33,7 @@ export class ProfileService {
         this.user.name = response!.name
         this.user.avatar_url = response!.avatar_url
         this.user.bio = response!.bio
-        // this.user.followers = response!.followers
-        // this.user.following = response!.following
-        // this.user.html_url = response!.html_url
-        // this.user.public_repos = response!.public_repos
-        // console.log(this.profile)
+        console.log(this.user)
         resolve(null)
       },
         error => {
@@ -49,23 +42,37 @@ export class ProfileService {
     })
     return promise
   }
-  displayRepos(user: any) {
+  showMyRepos(user: any = []) {
     interface apiResponse {
       contributors_url: string,
       html_url: string,
       description: string,
-      // language: string
+      public_repos: number,
+      followers: number,
+      following: number,
+      repos:number,
+      
     }
+    let headers = new HttpHeaders({
+      authorization: environment.apiUrl + environment.apiKey,
+    })
+    let options = { headers: headers }
     let url = environment.apiUrl + user + '/repos';
     let promise = new Promise((resolve, reject) => {
-      this.http.get<apiResponse>(url).toPromise().then(response => {
+      this.http.get<apiResponse>(url, options).toPromise().then(response => {
         this.repository.contributors_url = response!.contributors_url
-        // this.repository.login = response!.login
+        this.repository.public_repos = response!.public_repos
         this.repository.html_url = response!.html_url
         this.repository.description = response!.description
-        // this.repository.language = response!.language
+        this.repository.followers = response!.followers
+        this.repository.following = response!.following
+        this.repository.repos = response!.repos
+
+
         console.log(this.repository)
         resolve(null)
+
+
       }, error => {
         reject();
         console.log(error)

@@ -1,5 +1,5 @@
+import { ProfileService } from './../profile-service.service';
 import { User } from './../user';
-import { ProfileService } from '../profile-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Repository } from '../repository';
 
@@ -12,25 +12,24 @@ import { Repository } from '../repository';
 
 export class ProfileComponent implements OnInit {
   user: User;
-  profile: User[] = []
-  repository: Repository;
+  repository:any;
 
 
-  constructor(private profileRequest: ProfileService) {
+  constructor(private profileService: ProfileService) {
     this.user = new User("", "", "")
-    this.repository = new Repository("", "", "")
+    this.repository = new Repository(0,"", "", "",0,0,0)
   }
 
 
-  search(searchItem: any) {
-    this.profileRequest.getUserProfile(searchItem).then((success) => {
-      this.user = this.profileRequest.user
+  search(searchItem: any = []) {
+    this.profileService.getMyProfile(searchItem).then((success) => {
+      this.user = this.profileService.user
       console.log(this.user)
     })
 
-
-    this.profileRequest.displayRepos(searchItem).then((success) => {
-      this.repository = this.profileRequest.repository
+  
+    this.profileService.showMyRepos(searchItem).then((success) => {
+      this.repository = this.profileService.repository
       console.log(this.repository)
     })
 
