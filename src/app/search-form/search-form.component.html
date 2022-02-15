@@ -1,1 +1,5 @@
-<p>search-form works!</p>
+<form #name="ngForm" >
+        <input type="text"  placeholder="Enter username" [(ngModel)]="searchTerm"
+            name="searchTerm">
+        <input type="submit" id="input" value="Search" (click)="searchProfile()">
+</form>
