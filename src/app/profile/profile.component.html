@@ -9,13 +9,15 @@
                 <p class="card-body">Username: {{user.name}}</p>
             </div>
             <div class="col-md-6">
-                <p>Background: {{user.bio}}</p>
-                <p>Followers: {{user.followers}}</p>
-                <p>Following: {{user.following}}</p>
-                <p>Link to Contributors: {{user.contributors_url}}</p>
-                <p>Link to Github: {{user.html_url}}></p>
-                <p>Description: {{user.description}}</p>
-                <p>Number of Repositories: {{user.public_repos}}</p>
+                <ul class="list-group">
+                   <li class="list-group-items">Background: {{user.bio}}</li> 
+                   <li class="list-group-items"><button class="followers">Followers: {{user.followers}}</button></li> 
+                   <li class="list-group-items"><button class="following">Following: {{user.following}}</button></li> 
+                   <li class="list-group-items">See Repositories: <a href="{{user.html_url}}" target="_blank"><button class="contributors">See Contributors</button></a></li>  
+                   <li class="list-group-items">Link to Github: <a href="{{user.html_url}}" target="_blank"><button class="visit">Visit on Github</button></a></li> 
+                   <li class="list-group-items">Description: {{user.description}}</li> 
+                   <li class="list-group-items">Number of Repositories: {{user.public_repos}}</li> 
+                </ul>
             </div>
         </div>
     </div>

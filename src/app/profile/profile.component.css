@@ -1,0 +1,35 @@
+img{
+    border-radius: 50%;
+}
+h1{
+
+}
+.list-group{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.list-group-items{
+    list-style: none;
+    border: solid white 2px;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: blue;
+    
+}
+.followers{
+    border-radius: 5px;
+    background-color: green;
+    height: 30px;
+    color: white;
+    width: 150px;
+    border: none;
+}
+.following{
+    border-radius: 5px;
+    background-color: red;
+    height: 30px;
+    color: white;
+    width: 150px;
+    border: none;
+}
