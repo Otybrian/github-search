@@ -9,6 +9,7 @@ import { ProfileService } from './profile-service.service';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -17,7 +18,8 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     AppComponent,
     ProfileComponent,
     SearchFormComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    FooterComponent
     
   ],
   imports: [
