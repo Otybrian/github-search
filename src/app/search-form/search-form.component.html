@@ -1,5 +1,12 @@
-<form #name="ngForm" >
-        <input type="text"  placeholder="Enter username" [(ngModel)]="searchTerm"
-            name="searchTerm">
-        <input type="submit" id="input" value="Search" (click)="searchProfile()">
-</form>
+<div class="card-body bodyform">
+        <div class="card-body form2">
+         <form #name="ngForm" class="form2">
+        <div class="form-group  formsearch">
+                 <input type="text" class="form-control form3" placeholder="Enter username" [(ngModel)]="searchTerm"
+                     name="searchTerm">
+                    <input type="submit" class="btn btn-success" id="input" value="Search" (click)="searchProfile()">
+                </div>
+         </form>
+     </div>
+    
+    </div>
