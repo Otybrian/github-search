@@ -1,14 +1,15 @@
 <div class="container-fluid">
-<div class="card-body bodyform">
-        <div class="card-body form2">
-         <form #name="ngForm" class="form2">
-        <div class="form-group  formsearch">
-                 <input type="text" class="form-control form3" placeholder="Enter username" [(ngModel)]="searchTerm"
-                     name="searchTerm">
-                    <input type="submit" class="btn btn-success" id="input" value="Search" (click)="searchProfile()">
-                </div>
-         </form>
-     </div>
-    
+    <div class="card-body bodyform">
+            <div class="card-body form2">
+            <p style="font-size: 25px; color: blue;"> Input a github username and click search to get results;</p>
+                 <form #name="ngForm" class="form2">
+                    <div class="form-group  formsearch">
+                                 <input type="text" class="form-control form3" placeholder="Enter username"
+                        [(ngModel)]="searchTerm"                  name="searchTerm"><br>
+                                    <input type="submit" class="btn btn-success" id="input" value="Search"
+                        (click)="searchProfile()">
+                                </div>
+                     </form>
+             </div>
     </div>
 </div>

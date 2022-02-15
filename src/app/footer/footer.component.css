@@ -4,8 +4,10 @@
 .col-md-4 h4{
     color: whitesmoke;
     font-weight: 900;
+    text-align: center;
    
 }
 .col-md-4 p{
     color: white;
+    text-decoration: white;
 }
